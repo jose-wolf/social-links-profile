@@ -24,9 +24,9 @@ body {
 main {
   background-color: var(--cor-grey800);
   color: var(--cor-white);
-  padding: 24px;
-  width: 20.4375rem;
-  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 20.4375rem;
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,12 +39,12 @@ main {
 .people-status > .people-img {
   border-radius: 50%;
   width: 5.5rem;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .people-status > .title {
   font-size: 1.5rem;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   line-height: 150%;
   font-weight: 600;
 }
@@ -52,14 +52,14 @@ main {
 .people-status > .description {
   color: var(--cor-green);
   font-size: 0.875rem;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   line-height: 150%;
   font-weight: 400;
 }
 
 .people-status > .bio {
   font-size: 0.875rem;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   color: var(--cor-white);
   line-height: 150%;
   font-weight: 400;
@@ -77,7 +77,7 @@ main {
 
 .lists > ul > li > a {
   background-color: var(--cor-grey700);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   width: 17.4375rem;
   color: var(--cor-white);
   font-weight: 600;
@@ -89,27 +89,20 @@ main {
 
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0, 0625rem;
+  height: 0, 0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -1rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
 }
 
-/*action apenas para desktop*/
-/* 
-.lists > ul > li > a:hover {
-  background-color: var(--cor-green);
-  color: var(--cor-grey700);
-} */
-
 /* versão tablet */
 @media (min-width: 768px) {
   main {
-    padding: 40px;
+    padding: 2.5rem;
     width: 24rem;
   }
 }
@@ -124,5 +117,11 @@ main {
   }
   .lists > ul > li > a {
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .element {
+    transition: none;
   }
 }
